@@ -11,10 +11,6 @@ function update() {
   setInterval(update, 1000);
 //end of date current day
 
-// for (i = 0; i < 8; i++){
-//     $('#mother').append("<div id = 'time-blocks'><h4 class='hour'>9AM</h4><textarea class='textarea'></textarea><button class='saveBtn'>Save</button></div>");
-// }
-
 //color code for 9am block
 var today = new Date().getHours();
 if (today == 9) {
@@ -115,6 +111,8 @@ if (today == 17) {
      $('.five-textarea').css("background-color", "green");
  }
 
+ // captures text and displays when page is refreshed
+ //made a code block for each time block
  document.getElementById('nine').addEventListener("click", function(){
     var dataText = document.getElementById('nine-text').value;
     localStorage.setItem('9amSchedule', dataText);
